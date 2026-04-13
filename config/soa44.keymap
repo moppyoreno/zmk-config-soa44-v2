@@ -36,6 +36,21 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        periodcombo {
+            bindings = <&kp PERIOD>;
+            key-positions = <38 17>;
+        };
+
+        childacombo {
+            bindings = <&kp TILDE>;
+            key-positions = <38 29>;
+        };
+
+        underbarcombo {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <38 35>;
+        };
     };
 
     macros {
@@ -63,10 +78,10 @@
 
         default {
             bindings = <
-&kp ESCAPE      &kp Q         &kp L         &kp U                        &kp MINUS    &kp COMMA         &kp F      &kp W          &kp R  &kp Y  &kp P        &kp DEL
-&mt LCTRL TAB   &kp E         &kp I         &kp A                        &kp O        &kp PERIOD        &kp K      &kp T          &kp N  &kp S  &lt 5 H      &kp AT_SIGN
-&kp LEFT_SHIFT  &kp Z         &kp X         &kp C                        &kp V        &kp SLASH         &kp SQT    &kp G          &kp D  &kp J  &kp B        &kp BACKSLASH
-                &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT INT_MUHENKAN  &lt 2 SPACE  &lt 3 INT_HENKAN  &kp ENTER  &kp BACKSPACE                &lt 6 UNDER
+&kp ESCAPE      &kp Q         &kp L         &kp U                        &mt LEFT_BRACKET LEFT_PARENTHESIS  &mt RIGHT_BRACKET RIGHT_PARENTHESIS  &kp F      &kp W          &kp R  &kp Y  &kp P               &kp DEL
+&mt LCTRL TAB   &kp E         &kp I         &kp A                        &kp O                              &kp PERIOD                           &kp K      &kp T          &kp N  &kp S  &lt 5 H             &kp SLASH
+&kp LEFT_SHIFT  &kp Z         &kp X         &kp C                        &kp V                              &kp MINUS                            &kp G      &kp D          &kp M  &kp J  &kp B               &kp AT_SIGN
+                &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT INT_MUHENKAN  &lt 2 SPACE                        &lt 3 INT_HENKAN                     &kp ENTER  &kp BACKSPACE                &lt 6 SINGLE_QUOTE
             >;
         };
 
@@ -81,19 +96,19 @@
 
         NUM {
             bindings = <
-&trans  &kp N0            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans         &kp N6  &kp N7  &kp N8  &kp N9  &kp N0      &kp SLASH
-&trans  &trans            &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp BACKSLASH  &trans  &kp N4  &kp N5  &kp N6  &kp MINUS   &kp ASTERISK
-&trans  &kp LEFT_BRACKET  &kp N7        &kp N8        &kp N9        &kp PIPE       &trans  &kp N0  &kp N1  &kp N2  &kp N3      &kp PLUS
-        &trans            &trans        &trans        &trans        &trans         &trans  &trans                  &kp PERIOD
+&trans  &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERCENT  &kp DOLLAR    &kp EQUAL  &kp UP         &trans            &trans  &trans
+&trans  &kp PERIOD  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS     &kp ASTERISK  &kp LEFT   &kp DOWN       &kp RIGHT         &trans  &trans
+&trans  &kp F4      &kp N7        &kp N8        &kp N9        &kp MINUS    &kp SLASH     &trans     &kp LESS_THAN  &kp GREATER_THAN  &trans  &trans
+        &trans      &trans        &trans        &trans        &trans       &trans        &trans                                      &trans
             >;
         };
 
         FUNCTION {
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &kp F1           &kp F2       &kp F3    &kp F4      &kp F5       &trans     &kp UP         &trans        &trans                &trans                 &trans
-&trans  &kp F6           &kp F7       &kp F8    &kp F9      &kp F10      &trans     &kp LEFT       &kp DOWN      &kp RIGHT             &trans                 &trans
-        &kp F11          &kp F12      &trans    &trans      &trans       &trans     &trans                                             &trans
+&trans  &kp QUESTION  &kp PIPE         &kp UNDERSCORE  &trans      &trans     &trans   &kp DOUBLE_QUOTES  &trans         &kp INT_YEN    &kp PERCENT    &trans
+&trans  &kp EQUAL     &kp EXCLAMATION  &kp AT_SIGN     &kp PERIOD  &kp COMMA  &kp SQT  &kp PLUS           &kp AMPERSAND  &kp SLASH      &kp HASH       &trans
+&trans  &trans        &kp ASTERISK     &kp COLON       &kp CARET   &trans     &trans   &kp DOLLAR         &kp MINUS      &kp SEMICOLON  &kp BACKSLASH  &trans
+        &trans        &trans           &trans          &trans      &trans     &trans   &trans                                           &trans
             >;
         };
 
@@ -117,10 +132,10 @@
 
         Bluetooth {
             bindings = <
-&trans  &trans        &trans        &trans        &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans
-&trans  &trans        &trans        &trans        &trans  &trans  &trans        &trans        &trans        &trans        &trans          &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &bootloader   &trans        &trans        &trans        &trans          &bt BT_CLR
-        &trans        &trans        &trans        &trans  &trans  &trans        &trans                                    &bt BT_CLR_ALL
+&bt BT_CLR_ALL  &trans        &trans        &trans        &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&trans          &trans        &trans        &trans        &trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans
+&trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &bootloader   &trans        &trans        &trans        &trans        &bt BT_CLR
+                &trans        &trans        &trans        &trans  &trans  &trans        &trans                                    &trans
             >;
         };
     };
