@@ -78,19 +78,19 @@
 
         default {
             bindings = <
-&kp ESCAPE      &kp Q         &kp L         &kp U                        &mt LEFT_BRACKET LEFT_PARENTHESIS  &mt RIGHT_BRACKET RIGHT_PARENTHESIS  &kp F      &kp W          &kp R  &kp Y  &kp P               &kp DEL
-&mt LCTRL TAB   &kp E         &kp I         &kp A                        &kp O                              &kp PERIOD                           &kp K      &kp T          &kp N  &kp S  &lt 5 H             &kp SLASH
-&kp LEFT_SHIFT  &kp Z         &kp X         &kp C                        &kp V                              &kp MINUS                            &kp G      &kp D          &kp M  &kp J  &kp B               &kp AT_SIGN
-                &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT INT_MUHENKAN  &lt 2 SPACE                        &lt 3 INT_HENKAN                     &kp ENTER  &kp BACKSPACE                &lt 6 SINGLE_QUOTE
+&kp ESCAPE      &kp Q         &kp L         &kp U                        &mt AT_SIGN RIGHT_PARENTHESIS  &gresc            &kp F                 &kp W          &kp R  &kp Y    &kp P             &kp DEL
+&mt LCTRL TAB   &kp E         &kp I         &kp A                        &kp O                          &kp PERIOD        &kp K                 &kp T          &kp N  &lt 5 S  &kp H             &kp SLASH
+&kp LEFT_SHIFT  &kp Z         &kp X         &kp C                        &kp V                          &kp MINUS         &kp G                 &kp D          &kp M  &kp J    &kp B             &kp LEFT_BRACKET
+                &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT INT_MUHENKAN  &lt 2 SPACE                    &lt 3 INT_HENKAN  &mt LEFT_SHIFT ENTER  &kp BACKSPACE                  &lt 6 LEFT_BRACE
             >;
         };
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans        &kp LG(UP_ARROW)  &trans  &trans  &trans        &mkp MB3    &trans       &trans  &trans
-&trans  &trans  &trans  &kp LG(LEFT)  &kp LG(RIGHT)     &trans  &trans  &mkp MB1      &mkp MB2    &lt 5 L      &trans  &trans
-&trans  &trans  &trans  &trans        &trans            &trans  &trans  &kp LA(LEFT)  &kp K_COPY  &kp K_PASTE  &trans  &trans
-        &trans  &trans  &trans        &trans            &trans  &trans  &trans                                 &trans
+&trans  &trans  &trans  &trans        &kp LG(UP_ARROW)  &trans  &trans  &trans    &mkp MB3    &trans       &trans  &trans
+&trans  &trans  &trans  &kp LG(LEFT)  &kp LG(RIGHT)     &trans  &trans  &mkp MB1  &mkp MB2    &lt 5 S      &trans  &trans
+&trans  &trans  &trans  &trans        &trans            &trans  &trans  &trans    &kp K_COPY  &kp K_PASTE  &trans  &trans
+        &trans  &trans  &trans        &trans            &trans  &trans  &trans                             &trans
             >;
         };
 
