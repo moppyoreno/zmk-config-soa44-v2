@@ -88,7 +88,7 @@
 
         default {
             bindings = <
-&kp ESCAPE      &kp Q         &kp L           &kp U                      &mt JP_LPAREN JP_LBRACKET      &mt JP_RPAREN JP_RBRACKE    &kp F                 &kp W              &kp R        &kp Y    &kp P             &kp DEL
+&kp ESCAPE      &kp Q         &kp L           &kp U                      &mt JP_LPAREN JP_LBRACKET      &mt JP_RPAREN JP_RBRACKET    &kp F                 &kp W              &kp R        &kp Y    &kp P             &kp DEL
 &mt LCTRL TAB   &kp E         &mt LEFT_GUI I  &mt LCTRL A                &mt LEFT_SHIFT O               &kp PERIOD                  &kp K                 &mt RIGHT_SHIFT T  &mt RCTRL N  &lt 5 S  &kp H             &kp SLASH
 &kp LEFT_SHIFT  &kp J         &kp X           &kp C                      &kp V                          &kp MINUS                   &kp G                 &kp D              &kp M        &kp Z    &kp B             &kp JP_AT
                 &kp LEFT_WIN  &kp LEFT_ALT    &mt LEFT_SHIFT INT_HENKAN  &lt 2 SPACE                    &lt 3 INT_MUHENKAN          &mt LEFT_SHIFT ENTER  &kp BACKSPACE                            &lt 6 JP_QUOTE
