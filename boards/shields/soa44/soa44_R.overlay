@@ -30,7 +30,7 @@
 
 &zip_temp_layer {
     excluded-positions = <
-        15 16 19 20   
+        19 20   
     >;
 };
 
@@ -51,7 +51,7 @@
                 <&xy_clipper>,
                 <&zip_xy_to_scroll_mapper>,
                 <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
-                <&zip_scroll_scaler 2 5>;
+                <&zip_scroll_scaler 3 5>;
         };
     };
 };
