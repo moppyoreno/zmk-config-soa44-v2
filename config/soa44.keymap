@@ -107,19 +107,19 @@
 
         NUM {
             bindings = <
-&trans  &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERCENT  &kp DOLLAR    &kp EQUAL  &kp UP         &trans            &trans  &trans
-&trans  &kp PERIOD  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS     &kp ASTERISK  &kp LEFT   &kp DOWN       &kp RIGHT         &trans  &trans
-&trans  &kp F4      &kp N7        &kp N8        &kp N9        &kp MINUS    &kp SLASH     &trans     &kp LESS_THAN  &kp GREATER_THAN  &trans  &trans
-        &trans      &trans        &trans        &trans        &trans       &trans        &trans                                      &trans
+&trans  &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERCENT  &kp DOLLAR        &kp JP_EQUAL  &kp UP         &trans            &trans  &trans
+&trans  &kp PERIOD  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp JP_PLUS  &kp JP_ASTERISK   &kp LEFT   &kp DOWN       &kp RIGHT         &trans  &trans
+&trans  &kp F4      &kp N7        &kp N8        &kp N9        &kp MINUS    &kp SLASH         &trans     &kp LESS_THAN  &kp GREATER_THAN  &trans  &trans
+        &trans      &trans        &trans        &trans        &trans       &trans            &trans                                      &trans
             >;
         };
 
         FUNCTION {
             bindings = <
-&trans  &kp QUESTION  &kp PIPE         &kp UNDERSCORE  &trans      &trans     &trans   &kp DOUBLE_QUOTES  &trans         &kp INT_YEN  &kp PERCENT    &trans
-&trans  &kp EQUAL     &kp EXCLAMATION  &kp AT_SIGN     &kp PERIOD  &kp COMMA  &kp SQT  &kp PLUS           &kp AMPERSAND  &kp SLASH    &kp HASH       &trans
-&trans  &kp SEMI      &kp ASTERISK     &kp COLON       &kp CARET   &trans     &trans   &kp DOLLAR         &kp MINUS      &trans       &kp BACKSLASH  &trans
-        &trans        &trans           &trans          &trans      &trans     &trans   &trans                                         &trans
+&trans  &kp QUESTION  &kp JP_PIPE      &kp P_UNDERSCORE    &trans          &trans     &trans   &kp JP_DQUOTE      &trans         &kp INT_YEN  &kp PERCENT    &trans
+&trans  &kp JP_EQUAL  &kp EXCLAMATION  &kp JP_AT           &kp PERIOD      &kp COMMA  &kp SQT  &kp JP_PLUS        &kp AMPERSAND  &kp SLASH    &kp HASH       &trans
+&trans  &kp SEMI      &kp ASTERISK     &kp JP_COLON        &kp JP_CARET    &trans     &trans   &kp DOLLAR         &kp MINUS      &trans       &kp INT1       &trans
+        &trans        &trans           &trans              &trans          &trans     &trans   &trans                                         &trans
             >;
         };
 
