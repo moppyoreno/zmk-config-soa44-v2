@@ -118,7 +118,7 @@
             bindings = <
 &trans  &kp QUESTION  &kp JP_PIPE      &kp JP_UNDERSCORE   &trans          &trans     &trans   &kp JP_DQUOTE      &trans         &kp INT_YEN  &kp PERCENT     &trans
 &trans  &kp JP_EQUAL  &kp EXCLAMATION  &kp JP_AT           &kp PERIOD      &kp COMMA  &kp SQT  &kp JP_PLUS        &kp AMPERSAND  &kp SLASH    &kp HASH        &trans
-&trans  &kp SEMI      &kp JP_ASTERISK  &kp JP_COLON        &kp JP_CARET    &trans     &trans   &kp DOLLAR         &kp MINUS      &trans       &kp INT_1       &trans
+&trans  &kp SEMI      &kp JP_ASTERISK  &kp JP_COLON        &kp JP_CARET    &trans     &trans   &kp DOLLAR         &kp MINUS      &trans       &kp INT1        &trans
         &trans        &trans           &trans              &trans          &trans     &trans   &trans                                         &trans
             >;
         };
