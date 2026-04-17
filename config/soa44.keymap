@@ -4,6 +4,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // OS設定を日本語キーボードのまま使用するための変換定義
+
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
@@ -88,10 +89,10 @@
 
         default {
             bindings = <
-&kp ESCAPE      &kp Q         &kp L           &kp U                      &mt JP_LPAREN JP_LBRACKET      &mt JP_RPAREN JP_RBRACKET    &kp F                 &kp W              &kp R        &kp Y    &kp P             &kp DEL
-&mt LCTRL TAB   &kp E         &mt LEFT_GUI I  &mt LCTRL A                &mt LEFT_SHIFT O               &kp PERIOD                  &kp K                 &mt RIGHT_SHIFT T  &mt RCTRL N  &lt 5 S  &kp H             &kp SLASH
-&kp LEFT_SHIFT  &kp J         &kp X           &kp C                      &kp V                          &kp MINUS                   &kp G                 &kp D              &kp M        &kp Z    &kp B             &kp JP_AT
-                &kp LEFT_WIN  &kp LEFT_ALT    &mt LEFT_SHIFT INT_HENKAN  &lt 2 SPACE                    &lt 3 INT_MUHENKAN          &mt LEFT_SHIFT ENTER  &kp BACKSPACE                            &lt 6 JP_QUOTE
+&kp ESCAPE      &kp Q         &kp L           &kp U                      &mt JP_LPAREN JP_LBRACKET  &mt JP_RPAREN JP_RBRACKET  &kp F                 &kp W              &kp R        &kp Y    &kp P           &kp DEL
+&mt LCTRL TAB   &kp E         &mt LEFT_GUI I  &mt LCTRL A                &mt LEFT_SHIFT O           &kp PERIOD                 &kp K                 &mt RIGHT_SHIFT T  &mt RCTRL N  &lt 5 S  &kp H           &kp SLASH
+&kp LEFT_SHIFT  &kp J         &kp X           &kp C                      &kp V                      &kp MINUS                  &kp G                 &kp D              &kp M        &kp Z    &kp B           &kp JP_AT
+                &kp LEFT_WIN  &kp LEFT_ALT    &mt LEFT_SHIFT INT_HENKAN  &lt 2 SPACE                &lt 3 INT_MUHENKAN         &mt LEFT_SHIFT ENTER  &kp BACKSPACE                            &lt 6 JP_QUOTE
             >;
         };
 
@@ -115,10 +116,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &kp QUESTION  &kp PIPE         &kp UNDERSCORE  &trans      &trans     &trans   &kp DOUBLE_QUOTES  &trans         &kp INT_YEN    &kp PERCENT    &trans
-&trans  &kp EQUAL     &kp EXCLAMATION  &kp AT_SIGN     &kp PERIOD  &kp COMMA  &kp SQT  &kp PLUS           &kp AMPERSAND  &kp SLASH      &kp HASH       &trans
-&trans  &trans        &kp ASTERISK     &kp COLON       &kp CARET   &trans     &trans   &kp DOLLAR         &kp MINUS      &kp SEMICOLON  &kp BACKSLASH  &trans
-        &trans        &trans           &trans          &trans      &trans     &trans   &trans                                           &trans
+&trans  &kp QUESTION  &kp PIPE         &kp UNDERSCORE  &trans      &trans     &trans   &kp DOUBLE_QUOTES  &trans         &kp INT_YEN  &kp PERCENT    &trans
+&trans  &kp EQUAL     &kp EXCLAMATION  &kp AT_SIGN     &kp PERIOD  &kp COMMA  &kp SQT  &kp PLUS           &kp AMPERSAND  &kp SLASH    &kp HASH       &trans
+&trans  &kp SEMI      &kp ASTERISK     &kp COLON       &kp CARET   &trans     &trans   &kp DOLLAR         &kp MINUS      &trans       &kp BACKSLASH  &trans
+        &trans        &trans           &trans          &trans      &trans     &trans   &trans                                         &trans
             >;
         };
 
