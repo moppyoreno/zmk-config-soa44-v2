@@ -42,26 +42,6 @@
             bindings = <&kp LS(LCTRL)>;
             key-positions = <12 13>;
         };
-
-        periodcombo {
-            bindings = <&kp PERIOD>;
-            key-positions = <38 17>;
-        };
-
-        childacombo {
-            bindings = <&kp TILDE>;
-            key-positions = <38 29>;
-        };
-
-        findclick {
-            bindings = <&gresc>;
-            key-positions = <0 8 19 20 21 32 33 4 16 15 27>;
-        };
-
-        underbarcombo {
-            bindings = <&kp UNDER>;
-            key-positions = <37 23>;
-        };
     };
 
     macros {
@@ -128,6 +108,24 @@
             bindings = <&kp JP_RBRACKET>, <&kp GT>; // ] , >
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
+        m_dot: m_dot {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp COMMA>; // . , ,
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        m_dash: m_dash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp JP_TILDE>; // - , ~
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        m_at: m_at {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp JP_AT>, <&kp JP_UNDERSCORE>; // @ , _
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -136,9 +134,9 @@
         default {
             bindings = <
 &kp ESCAPE      &kp Q         &kp L           &kp U                      &m_bro                     &m_brc                     &kp F                 &kp W              &kp R        &kp Y    &kp P           &kp DEL
-&mt LCTRL TAB   &kp E         &mt LEFT_GUI I  &mt LCTRL A                &mt LEFT_SHIFT O           &kp PERIOD                 &kp K                 &mt RIGHT_SHIFT T  &mt RCTRL N  &lt 5 S  &kp H           &kp SLASH
-&kp LEFT_SHIFT  &kp J         &kp X           &kp C                      &kp V                      &kp MINUS                  &kp G                 &kp D              &kp M        &kp Z    &kp B           &kp JP_AT
-                &kp LEFT_WIN  &kp LEFT_ALT    &mt LEFT_SHIFT INT_HENKAN  &lt 2 SPACE                &lt 3 INT_MUHENKAN         &mt LEFT_SHIFT ENTER  &kp BACKSPACE                            &lt 6 JP_QUOTE
+&mt LCTRL TAB   &kp E         &mt LEFT_GUI I  &mt LCTRL A                &mt LEFT_SHIFT O           &m_dot                     &kp K                 &mt RIGHT_SHIFT T  &mt RCTRL N  &lt 5 S  &kp H           &m_dash
+&kp LEFT_SHIFT  &kp J         &kp X           &kp C                      &kp V                      &kp MINUS                  &kp G                 &kp D              &kp M        &kp Z    &kp B           &m_at
+                &kp LEFT_WIN  &kp LEFT_ALT    &lt 2 SPACE  &mt LEFT_SHIFT INT_HENKAN                &lt 3 INT_MUHENKAN         &mt LEFT_SHIFT ENTER  &kp BACKSPACE                            &lt 6 JP_QUOTE
             >;
         };
 
@@ -162,9 +160,9 @@
 
         FUNCTION {
             bindings = <
-&trans  &kp QUESTION  &kp JP_PIPE      &kp JP_UNDERSCORE   &trans          &trans     &trans   &kp JP_DQUOTE      &trans         &kp INT_YEN  &kp PERCENT     &trans
-&trans  &kp JP_EQUAL  &kp EXCLAMATION  &kp JP_AT           &kp PERIOD      &kp COMMA  &kp SQT  &kp JP_PLUS        &kp AMPERSAND  &kp SLASH    &kp HASH        &trans
-&trans  &kp SEMI      &kp JP_ASTERISK  &kp JP_COLON        &kp JP_CARET    &trans     &trans   &kp DOLLAR         &kp MINUS      &trans       &kp INT1        &trans
+&trans  &kp QUESTION  &kp JP_PIPE      &kp JP_UNDERSCORE   &trans          &trans     &trans   &kp JP_DQUOTE      &trans            &kp INT_YEN  &kp PERCENT     &trans
+&trans  &kp JP_EQUAL  &kp EXCLAMATION  &kp JP_AT           &kp PERIOD      &kp COMMA  &kp SQT  &kp JP_PLUS        &kp JP_AMPERSAND  &kp SLASH    &kp HASH        &trans
+&trans  &kp SEMI      &kp JP_ASTERISK  &kp JP_COLON        &kp JP_CARET    &trans     &trans   &kp DOLLAR         &kp MINUS         &trans       &kp INT1        &trans
         &trans        &trans           &trans              &trans          &trans     &trans   &trans                                         &trans
             >;
         };
