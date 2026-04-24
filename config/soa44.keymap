@@ -159,7 +159,7 @@
 &kp LEFT_SHIFT  &kp J         &kp X           &kp C                      &kp V                      &m_dash                  &kp G                 &kp D              &kp M        &kp Z    &kp B          &m_at
                 &kp LEFT_WIN  &kp LEFT_ALT    &lt 2 SPACE  &lt 3 INT_HENKAN               &mt LCTRL INT_MUHENKAN             &mt LEFT_SHIFT ENTER  &m_bs                           &m_qw
             >;
-        };h
+        };
 
         MOUSE {
             bindings = <
