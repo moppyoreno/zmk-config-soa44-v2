@@ -131,6 +131,18 @@
             bindings = <&kp JP_AT>, <&kp JP_UNDERSCORE>; // @ , _
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        m_bs: m_bs {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp  BACKSPACE>, <&kp DEL>; 
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        m_qw: m_qw {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp  JP_QUOTE>, <&kp JP_DQUOTE>; 
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         ws2812_wdg: ws2812_widget {
             compatible = "zmk,behavior-ws2812-widget";
             #binding-cells = <1>;
@@ -143,12 +155,12 @@
 
         default {
             bindings = <
-&kp ESCAPE      &kp Q         &kp L           &kp U                      &m_bro                     &m_brc                     &kp F                 &kp W              &kp R        &kp Y    &kp P           &kp DEL
-&mt LCTRL TAB   &kp E         &mt LEFT_GUI I  &mt LCTRL A                &mt LEFT_SHIFT O           &m_dot                     &kp K                 &mt RIGHT_SHIFT T  &mt RCTRL N  &lt 5 S  &kp H           &m_dash
-&kp LEFT_SHIFT  &kp J         &kp X           &kp C                      &kp V                      &kp MINUS                  &kp G                 &kp D              &kp M        &kp Z    &kp B           &m_at
-                &kp LEFT_WIN  &kp LEFT_ALT    &lt 2 SPACE  &mt LEFT_SHIFT INT_HENKAN                &lt 3 INT_MUHENKAN         &mt LEFT_SHIFT ENTER  &kp BACKSPACE                            &lt 6 JP_QUOTE
+&kp ESCAPE      &kp Q         &kp L           &kp U                      &m_bro                     &m_brc                   &kp F                 &kp W              &kp R        &kp Y    &kp P           &kp DEL
+&mt LCTRL TAB   &kp E         &mt LEFT_GUI I  &mt LCTRL A                &mt LEFT_SHIFT O           &m_dot                   &kp K                 &mt RIGHT_SHIFT T  &mt RCTRL N  &lt 5 S  &kp H           &kp SLASH
+&kp LEFT_SHIFT  &kp J         &kp X           &kp C                      &kp V                      &m_dash                  &kp G                 &kp D              &kp M        &kp Z    &kp B           &m_at
+                &kp LEFT_WIN  &kp LEFT_ALT    &lt 2 SPACE  &lt 3 INT_HENKAN               &mt LCTRL INT_MUHENKAN             &mt LEFT_SHIFT ENTER  &m_bs                           &m_qw
             >;
-        };
+        };h
 
         MOUSE {
             bindings = <
@@ -170,10 +182,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &kp QUESTION  &kp JP_PIPE      &kp JP_UNDERSCORE   &trans          &trans     &trans   &kp JP_DQUOTE      &trans            &kp INT_YEN  &kp PERCENT     &trans
-&trans  &kp JP_EQUAL  &kp EXCLAMATION  &kp JP_AT           &kp PERIOD      &kp COMMA  &kp SQT  &kp JP_PLUS        &kp JP_AMPERSAND  &kp SLASH    &kp HASH        &trans
-&trans  &kp SEMI      &kp JP_ASTERISK  &kp JP_COLON        &kp JP_CARET    &trans     &trans   &kp DOLLAR         &kp MINUS         &trans       &kp INT1        &trans
-        &trans        &trans           &trans              &trans          &trans     &trans   &trans                                         &trans
+&trans  &kp QUESTION  &kp JP_PIPE      &kp JP_UNDERSCORE   &trans          &trans     &trans        &kp JP_DQUOTE      &trans            &kp INT_YEN  &kp PERCENT     &trans
+&trans  &kp JP_EQUAL  &kp EXCLAMATION  &kp JP_AT           &kp PERIOD      &kp COMMA  &kp JP_QUOTE  &kp JP_PLUS        &kp JP_AMPERSAND  &kp SLASH    &kp HASH        &trans
+&trans  &kp SEMI      &kp JP_ASTERISK  &kp JP_COLON        &kp JP_CARET    &trans     &trans        &kp DOLLAR         &kp MINUS         &trans       &kp INT1        &trans
+        &trans        &trans           &trans              &trans          &trans     &trans        &trans                                         &trans
             >;
         };
 
@@ -197,10 +209,10 @@
 
         Bluetooth {
             bindings = <
-&bt BT_CLR_ALL  &trans        &trans        &trans        &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&trans          &trans        &trans        &trans        &trans  &trans  &trans        &ws2812_wdg   &trans        &trans        &trans        &trans
-&trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &bootloader   &trans        &trans        &trans        &trans        &bt BT_CLR
-                &trans        &trans        &trans        &trans  &trans  &trans        &trans                                    &trans
+&bt BT_CLR_ALL  &trans        &trans        &trans        &trans       &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&trans          &trans        &trans        &trans        &ws2812_wdg  &trans  &trans        &ws2812_wdg   &trans        &trans        &trans        &trans
+&trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans       &trans  &bootloader   &trans        &trans        &trans        &trans        &bt BT_CLR
+                &trans        &trans        &trans        &trans       &trans  &trans        &trans                                    &trans
             >;
         };
     };
